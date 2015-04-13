@@ -1,0 +1,314 @@
+
+
+* {padding: 0; margin: 0}
+
+
+html, body {
+	width: 100%;
+	font-size: 15px;
+}
+
+table {
+	border-collapse:collapse;
+}
+
+.settings {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.93);
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 200px;
+	color: #ffffff;
+	z-index: 10000;
+}
+
+.settings .link {
+	/*position: fixed;*/
+	background: rgba(0, 0, 0, 1);
+	height: 30px;
+	font-size: 1.2rem;
+	top: -30px;
+	border-top-right-radius: 3px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.settings .trash {
+	background: rgba(0, 0, 0, 1);
+	height: 30px;
+	font-size: 1.2rem;
+	top: -30px;
+	right: 0;
+	border-top-left-radius: 3px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.settings .count-all {
+	display: none;
+	background: rgba(0, 0, 0, 0.6);
+	height: 30px;
+	font-size: 1.2rem;
+	top: -30px;
+	right: 40px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	padding: 5px 10px;
+}
+
+.settings .count {
+	background: rgba(0, 0, 0, 1);
+	height: 30px;
+	font-size: 1.2rem;
+	top: -30px;
+	right: 20px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	padding: 5px 10px;
+}
+
+
+.control-label, label {
+	display: block;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.control-label.checkbox {
+	margin-top: 25px;
+	margin-left: 20px;
+}
+
+.panel {
+	background: rgba(0, 0, 0, 0.1);
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 50px;
+}
+
+.result {
+	width: 100%;
+}
+
+
+.result thead {
+	/*padding: 10px 20px;*/
+	/*background: rgba(0, 0, 0, 0.7);*/
+	/*position: fixed;*/
+
+	/*left: 0;*/
+	/*right: 0;*/
+	/*top: 0;*/
+}
+
+
+
+
+.requests {
+	display: table;
+}
+
+.filter {
+	display: table-row;
+	background: rgba(0, 0, 0, 0);
+}
+
+.filter.fixed {
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: -1000px;
+	z-index: 10000;
+}
+
+.filter > div {
+	display: table-cell;
+	padding: 5px;
+	border-right: 1px solid #555555;
+}
+
+.filter > div.filter-empty {
+	padding: 0;
+	border: 0;
+}
+
+.filter .btn.active {
+	color: #E73535;
+}
+
+
+.filter-tid, .tid {
+	min-width: 70px;
+}
+
+.tid {
+}
+
+.tid.open {
+}
+
+.tid.open span {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.tid.open b {
+	font-weight: normal;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.tid.open b:before {
+	content: "\00d7";
+}
+
+.req {
+	display: table-row;
+}
+
+.req:hover {
+	background: #eeeeee;
+}
+
+.req.selected {
+	background: #d8d8d8;
+}
+
+.req.selected:hover {
+	background: #dddddd;
+}
+
+
+
+.req > div {
+	position: relative;
+	display: table-cell;
+	padding: 5px;
+	text-indent: 5px;
+	white-space: nowrap;
+	border-bottom: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+}
+
+.req > .rid > b {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.req > .time > span {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.req > .url {
+
+}
+
+.req > .url a {
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.req > .url span {
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+.req > .url > input {
+	border: 0;
+}
+
+.req > .request span {
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+.req > .request span {
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+.req > .response span {
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+.popover {
+	height: 400px;
+	width: 500px;
+	max-width: 500px;
+}
+
+.popover-content {
+	overflow: auto;
+	height: 350px;
+}
+
+
+.dropdown-menu ul {
+	padding-left: 20px;
+	margin: 0 20px 20px 0;
+}
+
+.caret.children {
+	position: absolute;
+	left: 5px;
+	margin-top: 10px;
+}
+
+.slide {
+	display: none;
+}
+
+.form-control.right {
+	text-align: right;
+}
+
+.popover.left {
+	top: 0;
+}
+
+.popover.left > .arrow {
+	top: 15px;
+}
+
+.btn .glyphicon {
+	top: 2px;
+	left: -2px;
+}
+
+.btn.disabled {
+	color: #ffffff;
+}
+
+.glyphicon[rel="popover"] {
+	cursor: pointer;
+}
+
+.badge-right {
+	position: absolute;
+	right: 10px;
+	margin-top: 1px;
+}
+
+.badge-empty {
+	color: #000000;
+	background: transparent;
+}
+
+.hidden {
+	display: none;
+}
+
+.hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 0;
+	border-top: 1px solid #eeeeee;
+}
